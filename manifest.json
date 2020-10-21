@@ -1,0 +1,41 @@
+{
+"short_name": "Mhotivo",
+"name": "Mhotivo \n Innovando con EduBox",
+"icons": [
+{
+"src": "/mthumb.php?src=files/upload/sistema/logo_instituto.png&w=192&h=192&zc=3",
+"type": "image/png",
+"sizes": "192x192"
+},
+{
+"src": "/mthumb.php?src=files/upload/sistema/logo_instituto.png&w=128&h=128&zc=3",
+"type": "image/png",
+"sizes": "128x128"
+},
+{
+"src": "/mthumb.php?src=files/upload/sistema/logo_instituto.png&w=196&h=196&zc=3",
+"type": "image/png",
+"sizes": "96x96"
+},
+{
+"src": "/mthumb.php?src=files/upload/sistema/logo_instituto.png&w=64&h=64&zc=3",
+"type": "image/png",
+"sizes": "64x64"
+},
+{
+"src": "/mthumb.php?src=files/upload/sistema/logo_instituto.png&w=48&h=48&zc=3",
+"type": "image/png",
+"sizes": "48x48"
+},
+{
+"src": "/mthumb.php?src=files/upload/sistema/logo_instituto.png&w=32&h=32&zc=3",
+"type": "image/png",
+"sizes": "32x32"
+}
+],
+"start_url": "/",
+"background_color": "#FFFFFF",
+"theme_color": "#006532",
+"gcm_sender_id": "103953800507",
+"display": "standalone"
+}

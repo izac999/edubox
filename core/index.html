@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+
+<link rel="manifest" href="../manifest.json">
+
+<!--meta http-equiv="Content-Security-Policy" content="
+					default-src 'self' * data: gap: filesystem: 'unsafe-eval'; 
+          style-src 'self' * data: gap: filesystem: 'unsafe-inline' 'unsafe-eval';  
+          script-src 'self' * data:  gap: filesystem: 'unsafe-inline' 'unsafe-eval'; 
+          child-src 'self' * data: gap: filesystem: 'unsafe-inline' 'unsafe-eval'; 
+          frame-ancestors 'self' * data: gap: filesystem: 'unsafe-inline' 'unsafe-eval';
+          "-->
+
+
+<!-- Mirrored from mhotivo-sps.edubox.app/core/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Oct 2020 20:48:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta lang="es">
+<meta name="robots" content="noindex">
+
+<title>EduBox | Centro De Educación Bilingüe No Gubernamental MHOTIVO | Desarrollado con ♥ por BoxHN.com®</title>
+<link rel="icon" type="image/png" href="../mthumb2e43.png?src=files/upload/sistema/logo_instituto.png&amp;w=32&amp;h=32&amp;zc=3" />
+<!-- Le decimos al navegador que nuestra web esta optimizada para moviles -->
+
+<link href="../librerias/css/material/materialize.min.css" rel="stylesheet" type="text/css" />
+<link href="../librerias/css/material/mycss.css" rel="stylesheet" type="text/css" />
+<link href="../librerias/css/animate.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../librerias/js/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="/librerias/js/material/prefixfree.min.js"></script> -->
+<script type="text/javascript" src="../librerias/js/material/materialize.min.js"></script>
+<!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+
+
+<style>
+	/*.col{
+		float: inherit !important;
+	}*/
+
+	.row {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    margin-bottom: 0px;
+  }
+	.contenedor_txt{
+		display: inline-flex;
+		display: inline-block;
+		width: 270px;
+	}
+	.card{
+		padding: 20px;
+		background-color: rgba(255, 255, 255, 0.6);
+		padding-top: 10px !important;
+		width: 300px !important;
+		margin-left: calc(50% - 150px) !important;
+		/*transform: translateX(-50%);*/
+		border-radius: 5px;
+		border-radius: 150px 150px 5px 5px;
+		padding: 0 1rem !important;
+		box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+		/*height: 450px;*/
+		margin-top: 5% !important;
+		padding-bottom: 20px !important;
+		/*height: 520px;*/
+		text-align: center;
+	}
+	.btn, .btn-large, .btn-flat {
+    height: 45px !important;
+    padding: 0rem 1rem !important;
+  }
+	.input-field label {
+		color: #444444;
+		text-align: center;
+    width: 100%;
+	}
+	.input-field label.active {
+		font-size: 14px;
+	}
+	/*video { 
+
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+
+		position: fixed;    
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%); 
+
+		z-index: -100;
+
+		background-size: cover;
+
+		opacity: 1; 
+
+	}*/
+
+	@media (max-width: 768px){
+		/*video{
+			display: none;
+		}
+		.card{
+			margin-top: inherit;
+		}*/
+	}
+
+	.pie {
+		/*height: 15px !important;*/
+	}
+	.error{
+		color: #FF0000;
+		text-align: center;
+	}
+	/*.columna_personalizada{
+		max-width: 400px;
+		margin-left: inherit !important;
+
+	}*/
+	.titulo{
+		text-align: center;
+	}
+	.input-field{
+		margin-right: 5px;
+		border-radius: 50px;
+	}
+	.input-field input{
+		text-align: center;
+	}
+	.input-field label {
+    color: #9E9E9E;
+    margin-left: -10px;
+	}
+
+	.input-field label.active {
+		transform: translateY(-165%);
+		width: 100%;
+		text-align: center;
+	}
+	.contenedor_logo{
+		height: 250px;
+		width: 250px;
+		position: relative;
+		background-image: url(../mthumbad1a.png?src=files/upload/sistema/logo_instituto.png&amp;w=192&amp;h=192&amp;zc=3);
+		background-size: auto;
+		background-color: #fff;
+		background-position: center;
+		background-repeat: no-repeat;
+		border-style: solid;
+		border-width: 5px;
+		border-color: #fff;
+		border-radius: 50% 50% 50% 50%;
+		margin: 30px 10px;
+		/*box-shadow: 0px 0px 10px 0px #717171;*/
+
+	}
+
+	/*Fondo dinamico*/
+
+	/*body{
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}*/
+	#canvas{
+		position: fixed;
+		background-color: #384357;
+		width: 100%;
+		height: 100%;		
+		left: 0px;
+		top: 0px;
+	}
+
+	input[type=text], input[type=password], input[type=email], input[type=url], input[type=date], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+		font-size: 30px;
+		background-color: #ffffff00 !important;
+		color: black;
+		font-weight: 200;
+		border-radius: 5px;
+	}
+	.input-field label {
+		transform: translateY(-140%);
+		width: 100%;
+		text-align: center;
+		color: #656565;
+	}
+
+
+	/*CSS Efecto Fondo*/
+	.row, body, html {
+	-webkit-animation: colorchange 2s linear infinite alternate both;
+	animation: colorchange 2s linear infinite alternate both;
+	}
+	@keyframes colorchange {
+	  0% {
+	    background: #19dcea;
+	  }
+	  100% {
+	    background: #b22cff;
+	  }
+	}
+	/*CSS Efecto Fondo*/
+
+</style>
+<link href="../librerias/php/load_theme_css.css" type="text/css" />
+<body>
+	
+	<!--video id="mivideo" loop="true" autoplay="autoplay" preload="auto">
+		<source src="/librerias/img/video_fondo/fondo_login.mp4" type="video/mp4" />
+		<source src="/librerias/img/video_fondo/fondo_login.webm" type="video/webm" />
+		<source src="/librerias/img/video_fondo/fondo_login.ogv" type="video/ogg" />
+	</video-->
+
+
+	<div class="row">
+		<div class="col s12 card animated zoomInUp">
+				<div class="contenedor_logo animated bounceIn delay-5s"></div>
+
+				<form action="https://mhotivo-sps.edubox.app/core/index.php/sys_login_controlador/login" name="form_login" method="post" accept-charset="utf-8">
+
+				<div class="contenedor_txt">
+					<div class="input-field">
+						<input id="usuario" type="text" name="usuario" value="" autofocus>
+						<label id="lb_usuario" for="usuario"> USUARIO: </label>
+					</div>
+					<div class="input-field">
+						<input id="clave" type="password" name="clave" value="">
+						<label id="lb_clave" for="clave"> CONTRASEÑA: </label>
+					</div>
+				</div>
+				<input id="enviar" class="btn animated bounce" type="submit" value="INGRESAR A EDUBOX">
+
+								</form>
+		</div>
+	</div>
+
+
+</body>
+
+<script>
+
+
+		//Eliminamos video en pantallas pequeñas
+		// $(window).resize(function(){
+		// 	if ($(window).width() <= 600) {  
+		// 		$( "#mivideo" ).remove();
+		// 	}     
+		// });
+
+
+	$(document).ready(function() {
+
+		$('#enviar').click(function(event) {
+			$('.card').removeClass('jackInTheBox');
+			$('.card').addClass('zoomOutDown');
+		});
+
+		$( "#lb_usuario" ).hover(function() {
+			$( "#usuario" ).focus();
+		}, function() {});
+
+		$( "#lb_clave" ).hover(function() {
+			$( "#clave" ).focus();
+		}, function() {});
+	});
+</script>
+
+
+<script>
+	if ('serviceWorker' in navigator) {
+	    window.addEventListener('load', function() {
+			navigator.serviceWorker.register('../service-worker.js')
+				.then(function(reg){
+                    console.log("SW registrado");
+                   // console.log('ServiceWorker registration successful with scope: ', reg.scope);
+				}).catch(function(err) {
+					console.log("Error al registrar el Service worker", err)
+			});
+	   });	
+	   
+	}
+</script>
+
+<script>
+//This function is called whenever the window receives a message event, the message object is passed in as it's only parameter
+/*
+function receiver(message) {
+		console.log('Recibiendo en login');
+		console.log(message.data);
+    //get the message container html element (in this case, the messages div)
+    //var trusteddomain = "https://pruebas.edu.boxhn.com";
+    //inspect the origin property of the message event to ensure the message originates from the same domain)
+    //if (message.origin == trusteddomain) {
+        var msgcontent = message.data;
+        //check the content of the message only contains letters and numbers to prevent xss attacks
+        //if (msgcontent.match(/^[A-Za-z0-9]+$/)) {
+            //if no illegal characters are found in the message, print it to the message container div along with the time of receipt
+            var parametros = {
+            	"usuario" : message.data.usuario,
+            	"clave" : message.data.clave,
+            };
+
+            $.ajax({
+            	data: JSON.stringify(parametros),
+            	url:  '/core/index.php/sys_login_controlador/login_ajax',
+            	type: 'post',
+            	contentType: "application/json; charset=utf-8",
+            	beforeSend: function(){
+            		
+            	},
+            	success: function(response){
+            		//message.source.postMessage(response,message.origin);
+            		console.log('response en login');
+            		console.log(response);
+            		window.location.reload(true);
+            	},
+            	error: function(err){
+            		console.log( "Errrrrror " + err);
+            	}
+            });
+        //} else {
+            //if illegal characters are found in the message content, print an error message to the message container
+            //$(".error").html("Illegal characters found in the message received @. Message rejected<br/>");
+        //}
+    //} else {
+     //   $(".error").html("Message received from un-trusted domain:" + message.origin);
+    //}
+}
+
+//Add an event listener to the window object to catch any message events
+window.addEventListener('message', receiver, false);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Script para fondo dinamico
+/*
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+function resize() {
+    var box = c.getBoundingClientRect();
+    c.width = box.width;
+    c.height = box.height;
+}
+
+var light = {
+    x: 160,
+    y: 200
+}
+
+var colors = ["#2196F3", "#FEA600", "#3FD243"];
+
+function drawLight() {
+    ctx.beginPath();
+    ctx.arc(light.x, light.y, 1000, 0, 2 * Math.PI);
+    var gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 1000);
+    gradient.addColorStop(0, "#586b84");
+    gradient.addColorStop(1, "#384357");
+    ctx.fillStyle = gradient;
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(light.x, light.y, 20, 0, 2 * Math.PI);
+    gradient = ctx.createRadialGradient(light.x, light.y, 0, light.x, light.y, 5);
+    gradient.addColorStop(0, "#fff");
+    gradient.addColorStop(1, "#586b84");
+    ctx.fillStyle = gradient;
+    ctx.fill();
+}
+
+function Box() {
+    this.half_size = Math.floor((Math.random() * 50) + 1);
+    this.x = Math.floor((Math.random() * c.width) + 1);
+    this.y = Math.floor((Math.random() * c.height) + 1);
+    this.r = Math.random() * Math.PI;
+    this.shadow_length = 2000;
+    this.color = colors[Math.floor((Math.random() * colors.length))];
+  
+    this.getDots = function() {
+
+        var full = (Math.PI * 2) / 4;
+
+
+        var p1 = {
+            x: this.x + this.half_size * Math.sin(this.r),
+            y: this.y + this.half_size * Math.cos(this.r)
+        };
+        var p2 = {
+            x: this.x + this.half_size * Math.sin(this.r + full),
+            y: this.y + this.half_size * Math.cos(this.r + full)
+        };
+        var p3 = {
+            x: this.x + this.half_size * Math.sin(this.r + full * 2),
+            y: this.y + this.half_size * Math.cos(this.r + full * 2)
+        };
+        var p4 = {
+            x: this.x + this.half_size * Math.sin(this.r + full * 3),
+            y: this.y + this.half_size * Math.cos(this.r + full * 3)
+        };
+
+        return {
+            p1: p1,
+            p2: p2,
+            p3: p3,
+            p4: p4
+        };
+    }
+    this.rotate = function() {
+        var speed = (60 - this.half_size) / 20;
+        this.r += speed * 0.002;
+        this.x += speed;
+        this.y += speed;
+    }
+    this.draw = function() {
+        var dots = this.getDots();
+        ctx.beginPath();
+        ctx.moveTo(dots.p1.x, dots.p1.y);
+        ctx.lineTo(dots.p2.x, dots.p2.y);
+        ctx.lineTo(dots.p3.x, dots.p3.y);
+        ctx.lineTo(dots.p4.x, dots.p4.y);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+
+
+        if (this.y - this.half_size > c.height) {
+            this.y -= c.height + 100;
+        }
+        if (this.x - this.half_size > c.width) {
+            this.x -= c.width + 100;
+        }
+    }
+    this.drawShadow = function() {
+        var dots = this.getDots();
+        var angles = [];
+        var points = [];
+
+        for (dot in dots) {
+            var angle = Math.atan2(light.y - dots[dot].y, light.x - dots[dot].x);
+            var endX = dots[dot].x + this.shadow_length * Math.sin(-angle - Math.PI / 2);
+            var endY = dots[dot].y + this.shadow_length * Math.cos(-angle - Math.PI / 2);
+            angles.push(angle);
+            points.push({
+                endX: endX,
+                endY: endY,
+                startX: dots[dot].x,
+                startY: dots[dot].y
+            });
+        };
+
+        for (var i = points.length - 1; i >= 0; i--) {
+            var n = i == 3 ? 0 : i + 1;
+            ctx.beginPath();
+            ctx.moveTo(points[i].startX, points[i].startY);
+            ctx.lineTo(points[n].startX, points[n].startY);
+            ctx.lineTo(points[n].endX, points[n].endY);
+            ctx.lineTo(points[i].endX, points[i].endY);
+            ctx.fillStyle = "#384357";
+            ctx.fill();
+        };
+    }
+}
+
+var boxes = [];
+
+function draw() {
+    ctx.clearRect(0, 0, c.width, c.height);
+    drawLight();
+
+    for (var i = 0; i < boxes.length; i++) {
+        boxes[i].rotate();
+        boxes[i].drawShadow();
+    };
+    for (var i = 0; i < boxes.length; i++) {
+        collisionDetection(i)
+        boxes[i].draw();
+    };
+    requestAnimationFrame(draw);
+}
+
+resize();
+draw();
+
+while (boxes.length < 12) {
+    boxes.push(new Box());
+}
+
+window.onresize = resize;
+c.onmousemove = function(e) {
+    light.x = e.offsetX == undefined ? e.layerX : e.offsetX;
+    light.y = e.offsetY == undefined ? e.layerY : e.offsetY;
+}
+
+
+function collisionDetection(b){
+	for (var i = boxes.length - 1; i >= 0; i--) {
+		if(i != b){	
+			var dx = (boxes[b].x + boxes[b].half_size) - (boxes[i].x + boxes[i].half_size);
+			var dy = (boxes[b].y + boxes[b].half_size) - (boxes[i].y + boxes[i].half_size);
+			var d = Math.sqrt(dx * dx + dy * dy);
+			if (d < boxes[b].half_size + boxes[i].half_size) {
+			    boxes[b].half_size = boxes[b].half_size > 1 ? boxes[b].half_size-=1 : 1;
+			    boxes[i].half_size = boxes[i].half_size > 1 ? boxes[i].half_size-=1 : 1;
+			}
+		}
+	}
+}
+*/
+
+</script>
+
+<script>  var MessageBirdChatWidgetSettings = {     widgetId: '196bb06a-5868-4627-959e-6580fa1b5917',     initializeOnLoad: true,   };  !function(){"use strict";if(Boolean(document.getElementById("live-chat-widget-script")))console.error("MessageBirdChatWidget: Snippet loaded twice on page");else{var e,t;window.MessageBirdChatWidget={},window.MessageBirdChatWidget.queue=[];for(var i=["init","setConfig","toggleChat","identify","hide","on","shutdown"],n=function(){var e=i[d];window.MessageBirdChatWidget[e]=function(){for(var t=arguments.length,i=new Array(t),n=0;n<t;n++)i[n]=arguments[n];window.MessageBirdChatWidget.queue.push([[e,i]])}},d=0;d<i.length;d++)n();var a=(null===(e=window)||void 0===e||null===(t=e.MessageBirdChatWidgetSettings)||void 0===t?void 0:t.widgetId)||"",o=function(){var e,t=document.createElement("script");t.type="text/javascript",t.src="https://livechat.messagebird.com/bootstrap.js?widgetId=".concat(a),t.async=!0,t.id="live-chat-widget-script";var i=document.getElementsByTagName("script")[0];null==i||null===(e=i.parentNode)||void 0===e||e.insertBefore(t,i)};"complete"===document.readyState?o():window.attachEvent?window.attachEvent("onload",o):window.addEventListener("load",o,!1)}}();</script>
+
+
+
+<!-- Mirrored from mhotivo-sps.edubox.app/core/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Oct 2020 20:48:39 GMT -->
+</html><br>
+</body>
+
+<style>
+	.pie{
+    background-color: #2196F3;
+    bottom: 0;
+    color: #fff;
+    height: 15px;
+    left: 0;
+    margin: 0px;
+    padding: 5px;
+    padding-top: 0px;
+    position: fixed;
+    height: 18px;
+    width:100%;
+    z-index: 999;
+  }
+  .pie1{
+    z-index: 10;
+    bottom: -15px;
+    color: #fff;
+    font-size: 11px;
+    left: 5px;
+    position: fixed;
+  }
+  .pie2{
+    bottom: -10px;
+    color: #fff;
+    font-size: 11px;
+    position: fixed;
+    right: 5px;
+  }
+  .pie2:hover ~.time{
+    display: initial;
+  }
+  .time{
+    display: none;
+    position: fixed;
+    bottom: 19px;
+    background-color: #aaaaaaa6;
+    padding: 7px;
+    font-size: 12px;
+    right: 0px;
+    color: #000;
+    border-radius: 20px;
+  }
+</style>
+
+<link href="../librerias/php/load_theme_css.css" rel="stylesheet" type="text/css" />
+
+<div class="pie animated flipinx">
+	<p class="pie1  ">
+		Desarrollado con <span style="color: red;font-size: 16px; font-family: Segoe UI,Segoe UI emoji;">♥</span> por
+    <a
+    style="
+    color:white;
+    font-weight: bold;
+    "
+    target="_blank"
+    href="https://www.boxhn.com/">
+    BoxHN.com
+  </a>
+  <!-- | info@boxhn.com -->
+</p>
+<p class="pie2 ">
+  <span id="pie_mensaje"></span>
+  Resp:  <strong>0.0165</strong> Seg / <strong>2.23MB</strong>
+
+  <div class="time">
+          <p>Ultima actividad <strong>2020-10-21 2:48:38 PM</strong></p>
+          </div>
+
+</p>
+</div>
+<br><br>

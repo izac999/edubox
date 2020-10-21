@@ -1,0 +1,255 @@
+/*Contenido del body*/
+.mycontent{
+	margin-top: 112px;
+}
+
+.card{
+	z-index: 1;
+}
+.nav-fixed{
+z-index: 200;	
+}
+
+.mylogo{
+	font-size: 22px;
+}
+
+.card-action{
+	/*text-align: center;*/
+}
+
+/*Configuración para menú de Modulos*/
+ul.side-nav {
+	overflow-y: auto;
+}
+
+ul.side-nav > ul:last-child {
+	margin-bottom: 100px;
+}
+
+.side-nav a , .my_menu_modulos a{
+/*height: 50px;*/
+width: 100%;
+margin: 0px;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 5px;
+}
+
+ul.side-nav .collapsible-header {
+    margin: 0px;
+}
+
+ul.side-nav .collapsible-body li a {
+    margin: 0px;
+    padding-left: 14px;
+    padding-right: -14px;
+}
+#slide-out{
+  transition: all 1s;
+}
+.nav-mini-selected{
+  left: 0px !important;
+}
+.nav-normal{
+  width: 250px !important;
+  overflow-y: scroll !important;
+}
+.nav-mini{
+  width: 30px !important;
+  left: 0px !important;
+  overflow: hidden !important;
+}
+.mininav{
+    width: calc(100% - 30px);
+    margin-left: 30px;
+}
+
+.minimycontent {
+    margin-left: 30px;
+}
+
+/*Centrar icono en el menu de los modulos*/
+.my_menu_modulos{
+	line-height: normal;
+  width: 250px;
+  transition: all 0.9s;
+}
+
+/*quitar scrollbarr de barra superior*/
+.dropdown-content {
+	margin-bottom: 160px;
+	overflow-y: auto;
+}
+
+/*Mejorar alineación de iconos de barra superior*/
+.nav-wrapper i.left{
+margin-right: 5px;
+}
+
+/*Barra NAV fija*/
+.nav-fixed{
+position: fixed;
+right: 0;
+left: 0;
+}
+.nav-fixed {
+top: 0;
+}
+@media (min-width: 768px){
+  .nav-fixed{
+    border-radius: 0;
+  }
+}
+
+@media (min-width: 600px){
+  .mycontent{
+    margin-top: 110px;
+  }
+  .mynav{
+    top: 64px;
+  }
+}
+
+@media (max-width: 600px){
+  .mistabs_del span {
+    margin-top: -19.5px;
+  }
+}
+
+@media (max-width: 600px)  and (min-width: 480px) {
+  .nav-wrapper i.left{
+    margin-top: 13px;
+    height: 55px;
+    line-height: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+  /* label color */
+   .input-field label {
+     color: #9E9E9E;
+   }
+
+/*CONFIGURACIÓN PARA TEXT*/
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #2196F3;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus {
+     border-bottom: 1px solid #2196F3;
+     box-shadow: 0 1px 0 0 #2196F3;
+   }
+   /* valid color */
+   .input-field input[type=text].valid {
+     border-bottom: 1px solid #21F357;
+     box-shadow: 0 1px 0 0 #21F357;}
+
+   /* invalid color */
+   .input-field input[type=text].invalid {
+     border-bottom: 1px solid #F32121;
+     box-shadow: 0 1px 0 0 #F32121;
+   }
+
+
+/*CONFIGURACIÓN PARA TEXTAREA*/
+    /* label focus color */
+   .input-field textarea:focus + label {
+     color: #2196F3;
+   }
+   /* label underline focus color */
+   .input-field textarea:focus {
+     border-bottom: 1px solid #2196F3;
+     box-shadow: 0 1px 0 0 #2196F3;
+   }
+   /* valid color */
+   .input-field textarea.valid {
+     border-bottom: 1px solid #21F357;
+     box-shadow: 0 1px 0 0 #21F357;}
+     
+   /* invalid color */
+   .input-field textarea.invalid {
+     border-bottom: 1px solid #F32121;
+     box-shadow: 0 1px 0 0 #F32121;
+   }
+
+/*PARA BOTONES Y OTROS CONTROLES*/
+[type="radio"]:checked + label::after {
+    border: 2px solid #2196F3;
+    background-color: #2196F3;
+}
+.btn{
+	background-color: #2196F3 !important;
+}
+
+.select-wrapper input.select-dropdown{
+	padding-top: 10px;
+}
+
+/*PREFIX*/
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #2196F3;
+   }
+        
+
+
+/*Color DropDown */
+  .dropdown-content li > a, .dropdown-content li > span {
+    color: #2196F3 !important;
+  }
+  /* label focus color */
+  .input-field input:focus + label {
+    color: #2196F3 !important;
+  }
+  /*Color Text Input*/
+  .input-field textarea:focus + label {
+    color: #2196F3 !important;
+  }
+  /*Color TextArea*/
+  .input-field textarea[class=materialize-textarea]:focus {
+    border-bottom: 1px solid #2196F3;
+    box-shadow: 0 1px 0 0 #2196F3;
+  }
+  /*Color Range*/
+  input[type="range"] + .thumb {
+    background-color: #2196F3;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    background-color: #2196F3;
+  }
+  input[type=range]::-moz-range-thumb {
+    background-color: #2196F3;
+  }
+  input[type=range]::-ms-thumb {
+    background-color: #2196F3;
+  }
+
+  .tabs li.tab a { color: #2196F3; }
+  .tabs li.tab a:hover { color: #1B72B7; }
+  .tabs .indicator { background-color: #2196F3; }
+
+blockquote {
+    border-left: 5px solid #2196F3 !important;
+}
+
+/*Clase zom Hover personaliza*/
+.zom{
+  -webkit-transition:All 0.5s ease;
+  -moz-transition:All 0.5s ease;
+  -o-transition:All 0.5s ease;
+}
+.zom:hover {
+  z-index: 10;
+  transform: scale(1.8);
+}
